@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="ch.liquidconcept.cordova.appversion"
+  version="0.1.0">
+
+  <name>AppVersion</name>
+  <description>This plugin allows you to get application version</description>
+  <license>MIT</license>
+
+  <js-module src="www/AppVersion.js" name="AppVersion">
+    <clobbers target="appversion" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AppVersion">
+        <param name="android-package" value="ch.liquidconcept.cordova.appversion.AppVersion" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/AppVersion.java" target-dir="src/ch/liquidconcept/cordova/appversion" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="AppVersion">
+        <param name="ios-package" value="AppVersion" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/AppVersion.h" />
+    <source-file src="src/ios/AppVersion.m" />
+  </platform>
+
+</plugin>
