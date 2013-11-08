@@ -28,7 +28,7 @@
 
 @implementation AppVersion
 
-- (void)name:(CDVInvokedUrlCommand *)command
+- (void) name:(CDVInvokedUrlCommand *)command
 {
     NSString *versionName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 

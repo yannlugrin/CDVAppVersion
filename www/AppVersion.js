@@ -1,5 +1,5 @@
 //
-//  StayAwake.js
+//  AppVersion.js
 //
 //  The MIT License
 //
@@ -28,7 +28,7 @@
   var cordova = window.PhoneGap || window.Cordova || window.cordova;
 
   var AppVersion = function() {
-  }
+  };
 
   // get app version name
   AppVersion.prototype.name = function(successCallback, errorCallback) {
